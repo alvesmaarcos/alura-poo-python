@@ -2,13 +2,19 @@ class Restaurante:
     nome = ''
     categoria = ''
     ativo = False
+    criado = ''
+    telefone = ''
 
-restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Praça'
-restaurante_praca.categoria = 'Gourmet'
+    def __init__(self, nome, categoria, criado, telefone):
+        self.nome = nome
+        self.categoria = categoria
+        self.ativo = False
+        self.criado = criado
+        self.telefone = telefone
 
-restaurante_pizza = Restaurante()
+    def __str__(self):
+        return f'Nome: {self.nome}, Categoria: {self.categoria}, Ativo: {self.ativo}, Criado: {self.criado}, Telefone: {self.telefone}.'
 
-restaurantes = [restaurante_praca, restaurante_pizza]
+restaurante = Restaurante("Comida's", 'Nordestina', '10/07/2026', '(11) 9.9999-9999')
 
-print(restaurante_praca.ativo)
+print(restaurante)
